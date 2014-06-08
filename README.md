@@ -5,4 +5,4 @@ symphony-internalinjector
 
 ![npm bage](https://nodei.co/npm/symphony-internalinjector.png?downloads=true&stars=true)
 
-Angular.js internal injector for function injection
+Function injection at it finest.
