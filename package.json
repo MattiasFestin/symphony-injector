@@ -33,7 +33,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/MattiasFestin/symphony-internalinjector.git"
+    "url": "https://github.com/MattiasFestin/symphony-injector.git"
   },
   "keywords": [
     "function injector"

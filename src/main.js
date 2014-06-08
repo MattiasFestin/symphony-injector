@@ -29,23 +29,22 @@ function $Inject() {
 $Inject.prototype.instantiateInjector = function () {
 	var me = this,
 		pc = this.cache.providerCache,
-		ic = this.cache.instanceCache;
+		ic = this.cache.instanceCache,
+		ii = internalInjector(this._config, pc, me._path);
 
 	pc.$injector =
-		internalInjector(this._config, pc, this._path)(pc, function () {
+		ii(pc, function () {
 			throw new Error('Unknown provider: ' + me._path.join(' <- '));
 		});
 
 	ic.$injector =
-		internalInjector(this._config, pc, me._path)(ic, function (servicename) {
+		ii(ic, function (servicename) {
 			var provider = pc[servicename + me._config.providerSuffix];
 			return ic.$injector.invoke(provider.$get, provider);
 		});
 };
 
 $Inject.prototype.instantiateBuiltinServices = function () {
-	//[FIXME] - Better solution for global access of adding values to namespace
-	
 	this.constant('$this',	this);
 };
 
