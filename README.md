@@ -1,8 +1,8 @@
-symphony-internalinjector
+symphony-injector
 =========================
 
-[![build status](https://travis-ci.org/MattiasFestin/symphony-internalinjector.png)](https://travis-ci.org/MattiasFestin/symphony-internalinjector) [![Coverage Status](https://coveralls.io/repos/MattiasFestin/symphony-internalinjector/badge.png)](https://coveralls.io/r/MattiasFestin/symphony-internalinjector) [![NPM version](https://badge.fury.io/js/symphony-internalinjector.png)](http://badge.fury.io/js/symphony-internalinjector) [![Code Climate](https://codeclimate.com/github/MattiasFestin/symphony-internalinjector.png)](https://codeclimate.com/github/MattiasFestin/symphony-internalinjector) [![Dependency Status](https://david-dm.org/mattiasfestin/symphony-internalinjector.png?theme=shields.io)](https://david-dm.org/mattiasfestin/symphony-internalinjector) [![devDependency Status](https://david-dm.org/mattiasfestin/symphony-internalinjector/dev-status.png)](https://david-dm.org/mattiasfestin/symphony-internalinjector#info=devDependencies)
+[![build status](https://travis-ci.org/MattiasFestin/symphony-injector.png)](https://travis-ci.org/MattiasFestin/symphony-injector) [![Coverage Status](https://coveralls.io/repos/MattiasFestin/symphony-injector/badge.png)](https://coveralls.io/r/MattiasFestin/symphony-injector) [![NPM version](https://badge.fury.io/js/symphony-injector.png)](http://badge.fury.io/js/symphony-injector) [![Code Climate](https://codeclimate.com/github/MattiasFestin/symphony-injector.png)](https://codeclimate.com/github/MattiasFestin/symphony-injector) [![Dependency Status](https://david-dm.org/mattiasfestin/symphony-injector.png?theme=shields.io)](https://david-dm.org/mattiasfestin/symphony-injector) [![devDependency Status](https://david-dm.org/mattiasfestin/symphony-injector/dev-status.png)](https://david-dm.org/mattiasfestin/symphony-injector#info=devDependencies)
 
-![npm bage](https://nodei.co/npm/symphony-internalinjector.png?downloads=true&stars=true)
+![npm bage](https://nodei.co/npm/symphony-injector.png?downloads=true&stars=true)
 
 Function injection at it finest.
