@@ -169,11 +169,11 @@ describe('#inject', function () {
 	describe('#remove', function () {
 		it('should create an new instance from a service function', function () {
 			var i = new $Inject();
+
 			i.service('a', function () {
 				return 123;
 			});
-			
-			
+
 			i.inject(function (a) {
 				a.should.be.eql(123);
 			});

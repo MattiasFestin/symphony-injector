@@ -38,9 +38,14 @@ $Inject.prototype.instantiateInjector = function () {
 		});
 
 	ic.$injector =
-		ii(ic, function (servicename) {
+		ii(ic, function (servicename, locals) {
 			var provider = pc[servicename + me._config.providerSuffix];
-			return ic.$injector.invoke(provider.$get, provider);
+
+			if (!provider || !provider.$get) {
+				throw new Error(me._config.providerSuffix + ' \'' + servicename + '\' must define a $get factory method.');
+			}
+
+			return ic.$injector.invoke(provider.$get, provider, locals);
 		});
 };
 
@@ -70,8 +75,8 @@ $Inject.prototype.factory = function (name, factoryFn) {
 };
 
 $Inject.prototype.service = function (name, factoryFn) {
-	return this.factory(name, function ($injector) {
-		return $injector.instantiate(factoryFn);
+	return this.factory(name, function ($injector, $locals) {
+		return $injector.instantiate(factoryFn, $locals);
 	});
 };
 

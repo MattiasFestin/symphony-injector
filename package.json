@@ -1,6 +1,6 @@
 {
   "name": "symphony-injector",
-  "version": "0.1.0",
+  "version": "0.4.3",
   "description": "Function injection at it finest.",
   "main": "./src/main.js",
   "engineStrict": true,
