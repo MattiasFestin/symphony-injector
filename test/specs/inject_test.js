@@ -55,6 +55,23 @@ describe('#inject', function () {
 	});
 	
 	describe('#provider', function () {
+		it('should throw an error if the $get function do not exsist', function () {
+			var i = new $Inject();
+			(function() {
+				i.provider('qwerty', function () {
+					return {};
+				});
+			}).should.throw('Provider \'qwerty\' must define a $get factory method.');
+		});
+
+		it('should throw an error if the provider do not exsist', function () {
+			var i = new $Inject();
+
+			(function() {
+				i.inject(function (abc123) {});
+			}).should.throw('Provider \'abc123\' must define a $get factory method.');
+		});
+
 		it('should create an new instance from a function $get factory method', function () {
 			var i = new $Inject();
 			i.provider('a', function () {
